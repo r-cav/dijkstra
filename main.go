@@ -61,6 +61,9 @@ func buildGraph() *WeightedGraph {
 		"Porto-Alegre",
 		"Florianopolis",
 		"Campo-Grande",
+		"Cuiaba",
+		"Goiania",
+		"Porto-Velho",
 	)
 	graph.AddEdge(nodes["Brasilia"], nodes["Belo-Horizonte"], 594)
 	graph.AddEdge(nodes["Brasilia"], nodes["Rio-de-Janeiro"], 975)
@@ -80,6 +83,15 @@ func buildGraph() *WeightedGraph {
 	graph.AddEdge(nodes["Florianopolis"], nodes["Curitiba"], 333)
 	graph.AddEdge(nodes["Florianopolis"], nodes["Campo-Grande"], 1080)
 	graph.AddEdge(nodes["Salvador"], nodes["Campo-Grande"], 1920)
+	graph.AddEdge(nodes["Campo-Grande"], nodes["Cuiaba"], 586)
+	graph.AddEdge(nodes["Campo-Grande"], nodes["Goiania"], 631)
+	graph.AddEdge(nodes["Cuiaba"], nodes["Goiania"], 714)
+	graph.AddEdge(nodes["Goiania"], nodes["Porto-Velho"], 1860)
+	graph.AddEdge(nodes["Porto-Velho"], nodes["Vitoria"], 3000)
+	graph.AddEdge(nodes["Porto-Velho"], nodes["Salvador"], 3120)
+	graph.AddEdge(nodes["Porto-Velho"], nodes["Campo-Grande"], 1740)
+	graph.AddEdge(nodes["Porto-Velho"], nodes["Cuiaba"], 1140)
+	graph.AddEdge(nodes["Goiania"], nodes["Florianopolis"], 1293)
 
 	return graph
 }
